@@ -1,0 +1,41 @@
+# NEXT
+
+## File-system Rounting
+
+- Roteamento baseado em arquivos físicos.
+- Para criar uma rota, criamos uma pasta dentro da pasta app e criamos um arquivo chamado page.tsx. 
+Ex: para ter http://localhost:3000/product => app/product/page.tsx
+* Os componentes de página devem ser exportados como export default *
+- Se uma rota recebe parâmetros, alteramos o nome do arquivo page.tsx por [nomeDoParametro].tsx => [id].tsx
+Ex: http://localhost:3000/product/1
+- Para acessar esse parâmetro (id) utilizamos um hook do next chamado const { query } = useRouter()
+
+## Adicionar fontes externas à aplicação
+
+- Podemos criar um arquivo _document.tsx dentro da pasta app:
+import { Html, Head, Main, NextScript } from "next/document"
+
+export default function Document() {
+    return (
+        <Html>
+            <Head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+                <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+            </Head>
+            <body>
+                <Main />
+                <NextScript />
+            </body>
+        </Html>
+    )
+}
+
+ou podemos dentro de layout.tsx criar:
+import { Roboto } from "next/font/google"
+
+const roboto = Roboto({ weight: ["400", "700"] });
+
+<body className={roboto.className}>
+        {children}
+</body>
