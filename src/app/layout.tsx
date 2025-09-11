@@ -3,6 +3,7 @@ import "./globals.css";
 import { Roboto } from "next/font/google"
 import "@/src/styles/global";
 import { globalStyles } from "@/src/styles/global";
+import { Header } from "../components/Header";
 
 
 const roboto = Roboto({ weight: ["400", "700"] });
@@ -15,6 +16,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <style id="stitches" dangerouslySetInnerHTML={{__html: getCssText() }} />
       </head>
       <body className={roboto.className}>
+        <Header />
         {children}
       </body>
     </html>
