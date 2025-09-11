@@ -1,5 +1,7 @@
 # NEXT
 
+----------------------------------------------------------------------
+
 ## File-system Rounting
 
 - Roteamento baseado em arquivos físicos.
@@ -39,3 +41,12 @@ const roboto = Roboto({ weight: ["400", "700"] });
 <body className={roboto.className}>
         {children}
 </body>
+
+----------------------------------------------------------------------
+
+## Stitches
+
+- Biblioteca de estilização tipo styled-componentes
+- Criar pasta styles/index.ts
+- Injeta o styles do stitches dentro do layout:
+ <style id="stitches" dangerouslySetInnerHTML={{__html: getCssText() }} />
