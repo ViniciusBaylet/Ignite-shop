@@ -50,3 +50,11 @@ const roboto = Roboto({ weight: ["400", "700"] });
 - Criar pasta styles/index.ts
 - Injeta o styles do stitches dentro do layout:
  <style id="stitches" dangerouslySetInnerHTML={{__html: getCssText() }} />
+
+----------------------------------------------------------------------
+
+## Global.css
+
+- Cria os estilos globais na pasta src/styles/global.ts
+- Importa os estilos no arquivo layout.tsx: import "@/src/styles/global";
+- Chama a função globalStyles(); dentro do layout.tsx

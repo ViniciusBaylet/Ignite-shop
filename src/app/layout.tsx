@@ -1,8 +1,12 @@
 import { getCssText } from "../styles";
 import "./globals.css";
 import { Roboto } from "next/font/google"
+import "@/src/styles/global";
+import { globalStyles } from "@/src/styles/global";
+
 
 const roboto = Roboto({ weight: ["400", "700"] });
+globalStyles();
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
