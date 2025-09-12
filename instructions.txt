@@ -65,3 +65,21 @@ const roboto = Roboto({ weight: ["400", "700"] });
 
 - O next otimiza todas as imagens que nós usamos na nossa aplicação através do componente: import Image from "next/image"
 - Podemos passar um parâmetro width que significa a largura máxima que esperamos que a imagem tenha.
+
+----------------------------------------------------------------------
+
+## Keen-Slider
+
+- Carrossel alternativo
+
+- npm install keen-slider
+- import { useKeenSlider } from "keen-slider/react";
+- import "keen-slider/keen-slider.min.css";
+- const [sliderRef] = useKeenSlider({
+    slides: {
+      perView: 3
+    }
+  }) 
+DENTRO DO COMPOENENTE
+- sliderRef vai na div por volta de onde queremos aplicar o carrossel (<HomeContainer ref={sliderRef} className="keen-slider">)
+- Cada produto do carrossel = <Product className="keen-slider__slide">
