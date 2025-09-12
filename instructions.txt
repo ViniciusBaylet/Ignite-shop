@@ -58,3 +58,10 @@ const roboto = Roboto({ weight: ["400", "700"] });
 - Cria os estilos globais na pasta src/styles/global.ts
 - Importa os estilos no arquivo layout.tsx: import "@/src/styles/global";
 - Chama a função globalStyles(); dentro do layout.tsx
+
+----------------------------------------------------------------------
+
+## Imagens
+
+- O next otimiza todas as imagens que nós usamos na nossa aplicação através do componente: import Image from "next/image"
+- Podemos passar um parâmetro width que significa a largura máxima que esperamos que a imagem tenha.
